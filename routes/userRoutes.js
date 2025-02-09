@@ -4,6 +4,17 @@ const User = require("../models/user");
 const { getAllUsers, createUser, deleteUser } = require("../controllers/Users.controller");
 
 //get all users
+/**
+ @swagger
+ * /api/users:
+ *   get:
+ *     tags:
+ *       - Users
+ *     description: Returns all users
+ *     responses:
+ *       200:
+ *         description: A list of users
+ */
 router.get("/", getAllUsers);
 
 router.post("/",createUser);
